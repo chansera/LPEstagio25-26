@@ -1,0 +1,50 @@
+/* src/styles/global.css */
+@import "tailwindcss";
+
+@theme {
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-300: #d1d5db;
+  --color-gray-500: #6b7280;
+  --color-gray-900: #111827;
+  --color-red-600: #dc2626;
+  --color-white: #ffffff;
+
+  /* --- PALETA DOURADA (baseada no logo) --- */
+  /* Dourado principal - tom médio/rico */
+  --color-brand: #D4AF37;
+
+  /* Hover - tom mais escuro/quente */
+  --color-brand-dark: #B8941F;
+
+  /* Versão mais clara para backgrounds/efeitos */
+  --color-brand-light: #F4E4A6;
+
+  /* Tom terroso/acastanhado para complementar */
+  --color-brand-earth: #8B7355;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-gray-50);
+    color: var(--color-gray-900);
+    font-family: ui-sans-serif, system-ui, sans-serif;
+  }
+}
+
+/* Classes utilitárias (opcional, se quiser usar no HTML) */
+.bg-brand {
+  background-color: var(--color-brand);
+}
+
+.text-brand {
+  color: var(--color-brand);
+}
+
+.hover\:text-brand:hover {
+  color: var(--color-brand);
+}
+
+.hover\:bg-brand-dark:hover {
+  background-color: var(--color-brand-dark);
+}
