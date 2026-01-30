@@ -1,5 +1,4 @@
 <script lang="ts">
- import Header from '$lib/components/organisms/Header.svelte';
  import logoImg from '$lib/assets/logo.png';
  import { SITE_INFO, SITE_ROUTES,ACTIVE_PATH_PATTERNS } from '$lib/constants';
  import Button from '$lib/components/molecules/Button.svelte';
