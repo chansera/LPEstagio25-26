@@ -1,50 +1,122 @@
-/* src/styles/global.css */
 @import "tailwindcss";
 
 @theme {
-  --color-gray-50: #f9fafb;
-  --color-gray-100: #f3f4f6;
-  --color-gray-300: #d1d5db;
-  --color-gray-500: #6b7280;
-  --color-gray-900: #111827;
-  --color-red-600: #dc2626;
-  --color-white: #ffffff;
+  /* --- PALETA AERO (Cinzas Metálicos/Frios) --- */
+  /* Substitui o cinza neutro por algo com "alma" de metal e céu */
+  --color-aero-50: #f8fafc;  /* Branco Titânio */
+  --color-aero-100: #f1f5f9; /* Gelo */
+  --color-aero-200: #e2e8f0; /* Alumínio Fosco */
+  --color-aero-300: #cbd5e1; /* Prata */
+  --color-aero-400: #94a3b8; /* Chumbo Claro */
+  --color-aero-500: #64748b; /* Aço Estrutural (Texto Secundário) */
+  --color-aero-600: #475569; /* Fuselagem Escura */
+  --color-aero-700: #334155; /* Ferro */
+  --color-aero-800: #1e293b; /* Cinza Petróleo (Fundos Escuros) */
+  --color-aero-900: #0f172a; /* Cockpit (Quase preto, toque azulado) */
+  --color-aero-950: #020617; /* Espaço Noturno (Preto Profundo) */
 
-  /* --- PALETA DOURADA (baseada no logo) --- */
-  /* Dourado principal - tom médio/rico */
-  --color-brand: #D4AF37;
+  /* --- PALETA GOLD (Ouro Aviação) --- */
+  --color-gold-light: #FCEebb; /* Reflexo de Luz */
+  --color-gold-base: #C5A059;  /* Ouro Metálico (Cor Principal) */
+  --color-gold-dark: #967839;  /* Bronze Antigo (Sombras) */
+  --color-gold-rich: #B3882A;  /* Ouro Rico (Para gradientes) */
 
-  /* Hover - tom mais escuro/quente */
-  --color-brand-dark: #B8941F;
-
-  /* Versão mais clara para backgrounds/efeitos */
-  --color-brand-light: #F4E4A6;
-
-  /* Tom terroso/acastanhado para complementar */
-  --color-brand-earth: #8B7355;
+  /* --- CORES SEMÂNTICAS --- */
+  --color-brand: var(--color-gold-base);
+  --color-surface: var(--color-aero-900); /* Cor de fundo padrão dos cards */
+  --color-canvas: var(--color-aero-950);  /* Cor de fundo do site */
 }
 
 @layer base {
   body {
-    background-color: var(--color-gray-50);
-    color: var(--color-gray-900);
-    font-family: ui-sans-serif, system-ui, sans-serif;
+    background-color: var(--color-canvas);
+    color: var(--color-aero-100);
+    font-family: 'Inter', system-ui, sans-serif; /* Fonte limpa e técnica */
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Títulos em branco titânio para contraste máximo */
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--color-aero-50);
+    letter-spacing: -0.025em; /* Deixa o texto mais compacto/moderno */
   }
 }
 
-/* Classes utilitárias (opcional, se quiser usar no HTML) */
-.bg-brand {
-  background-color: var(--color-brand);
+/* --- EFEITOS ESPECIAIS (A Mágica do Metal) --- */
+
+/* 1. TEXTO DOURADO METÁLICO
+   Use em números grandes ou títulos curtos */
+.text-gold-metal {
+  background: linear-gradient(
+    to bottom right,
+    #FCEebb 0%,
+    #C5A059 40%,
+    #B3882A 60%,
+    #967839 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0px 2px 0px rgba(0,0,0,0.5)); /* Sombra dura para relevo */
 }
 
-.text-brand {
-  color: var(--color-brand);
+/* 2. TEXTO AÇO ESCOVADO
+   Use em subtítulos técnicos */
+.text-steel-metal {
+  background: linear-gradient(
+    180deg,
+    #f8fafc 0%,
+    #94a3b8 50%,
+    #64748b 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
-.hover\:text-brand:hover {
-  color: var(--color-brand);
+/* 3. BORDA DOURADA ELEGANTE
+   Para inputs ou cards */
+.border-gold-glow {
+  border: 1px solid var(--color-gold-dark);
+  box-shadow: 0 0 0 1px rgba(197, 160, 89, 0.1); /* Brilho interno sutil */
+  transition: all 0.3s ease;
+}
+.border-gold-glow:hover {
+  border-color: var(--color-gold-base);
+  box-shadow: 0 0 10px rgba(197, 160, 89, 0.3); /* Brilho externo ao passar o mouse */
 }
 
-.hover\:bg-brand-dark:hover {
-  background-color: var(--color-brand-dark);
+/* 4. FUNDO GRADIENTE METÁLICO (Botões) */
+.bg-gold-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--color-gold-base) 0%,
+    var(--color-gold-rich) 100%
+  );
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Efeito de brilho passando no botão ao dar hover */
+.bg-gold-gradient::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(255,255,255,0.4) 50%,
+    transparent 100%
+  );
+  transform: skewX(-25deg);
+  transition: none;
+}
+
+.bg-gold-gradient:hover::after {
+  left: 150%;
+  transition: all 0.7s ease;
 }
