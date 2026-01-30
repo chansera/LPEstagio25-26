@@ -1,7 +1,7 @@
 <script lang="ts">
-  import logoImg from '$lib/assets/logo.png';
+ import logoImg from '$lib/assets/logo.png';
 
-  const currentYear = new Date().getFullYear();
+ const currentYear = new Date().getFullYear();
 </script>
 
 <footer class="bg-black border-t border-gray-800 text-gray-300 font-sans">
@@ -40,9 +40,9 @@
             <div class="flex flex-col items-center md:items-start text-center md:text-left">
                 <h4 class="font-bold text-white text-lg mb-6">Navegação</h4>
                 <ul class="space-y-4 text-sm w-full">
-                    <li><a href="/servicos" hx-get="/servicos" hx-target="#main-content" hx-push-url="true" class="text-gray-400 hover:text-brand transition-colors">Serviços</a></li>
-                    <li><a href="/sobre" hx-get="/sobre" hx-target="#main-content" hx-push-url="true" class="text-gray-400 hover:text-brand transition-colors">Sobre Nós</a></li>
-                    <li><a href="/contato" hx-get="/contato" hx-target="#main-content" hx-push-url="true" class="text-gray-400 hover:text-brand transition-colors">Contato</a></li>
+                    <li><a href="/servicos"  class="text-gray-400 hover:text-brand transition-colors">Serviços</a></li>
+                    <li><a href="/sobre"  class="text-gray-400 hover:text-brand transition-colors">Sobre Nós</a></li>
+                    <li><a href="/contato"  class="text-gray-400 hover:text-brand transition-colors">Contato</a></li>
                     <li class="pt-4 mt-2 border-t border-gray-800 w-full md:w-32 mx-auto md:mx-0">
                         <a href="#" class="text-xs text-gray-500 hover:text-brand uppercase tracking-wider font-semibold">
                             ↑ Voltar ao Topo
