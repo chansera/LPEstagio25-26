@@ -1,22 +1,21 @@
+// src/lib/constants.ts
+
 export const SITE_INFO = {
-    nome: 'Lupar Imobiliária',
-    whatsapp: '5567984679017', // Número para a API (sem espaços)
-    telefoneFixo: '(67) 3521-3520',
-    celularVisual: '(67) 98467-9017', // Para mostrar na tela
-    endereco: 'Rua Oscar Guimarães, 1067, Centro',
-    email: 'contato@lupar.com.br' // Ajuste se tiver o real
-};
+  nome: 'D.A Aviação',
+  regina: '5518997831844',
+  financeiro: '5518997450646',
+  email: 'd.a.aviacao@terra.com.br',
+  endereco: 'Birigui, SP'
+} as const;
 
-export const SITE_ROUTES: NavLInk[] = [
-    { name: 'Início', href: '/' },
-    { name: 'Serviços', href: '/imoveis' },
-    { name: 'Sobre', href: '/sobre' },
-    { name: 'Contato', href: '/contato' }
-] as const;
+export interface NavLink {
+  name: string;
+  href: string;
+}
 
-export const ACTIVE_PATH_PATTERNS: Record<string, RegExp[]> = {
-    '/': [
-        /^\/imoveis$/,
-        /^\/imoveis\/.*/ // Para capturar subrotas como /imoveis/123
-    ],
-};
+export const SITE_ROUTES = [
+  { name: 'Início', href: '/' },
+  { name: 'Serviços', href: '/servicos' },
+  { name: 'Sobre', href: '/sobre' },
+  { name: 'Contato', href: '/contato' }
+] as const satisfies NavLink[];
