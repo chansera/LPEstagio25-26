@@ -3,7 +3,7 @@
  export let variant: 'primary' | 'secondary' | 'outline' = 'primary';
  export let className: string = '';
 
- const baseClass = "font-semibold py-2 px-6 sm:py-3 sm:px-8 rounded-xl text-base sm:text-lg shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 inline-flex items-center justify-center";
+ const baseClass = "font-semibold py-2 px-6 sm:py-3 sm:px-8 rounded-xl text-base sm:text-lg hover:scale-[1.02] transition-all duration-300 shadow-lg shadow-gold-base/20 hover:shadow-xl hover:shadow-gold-base/30inline-flex items-center justify-center";
 
  const variantClasses = {
      primary: "bg-aero-800 text-white hover:bg-brand",

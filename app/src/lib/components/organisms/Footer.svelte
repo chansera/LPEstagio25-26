@@ -1,10 +1,9 @@
 <script lang="ts">
  import logoImg from '$lib/assets/logo.png';
-
  const currentYear = new Date().getFullYear();
 </script>
 
-<footer class="bg-black border-t border-gray-800 text-gray-300 font-sans">
+<footer class="bg-black border border-gold-glow text-gray-300 font-sans">
 
     <div class="container mx-auto px-6 py-16 max-w-7xl">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
@@ -84,12 +83,12 @@
         </div>
     </div>
 
-    <div class="bg-black border-t border-gray-900 py-6">
+    <div class="bg-aero-950 border-t border-gold-glow py-6">
         <div class="container mx-auto px-4 flex flex-col items-center justify-center text-center space-y-2">
-            <p class="text-xs text-gray-500">
+            <p class="text-xs text-aero-100">
                 &copy; {currentYear} D.A Aviação. Todos os direitos reservados.
             </p>
-            <p class="text-xs text-gray-600">
+            <p class="text-xs text-gray-100">
                 Precisão e segurança em manutenção aeronáutica.
             </p>
         </div>

@@ -5,8 +5,8 @@
 </script>
 
 <section>
-    <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center py-12 lg:py-24">
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="grid grid-cols-1  lg:grid-cols-2 gap-8 m-auto lg:gap-12 items-center py-12 lg:py-24">
 
             <!-- Conteúdo -->
             <div class="flex flex-col justify-center p-6 md:p-12 lg:p-16 transition-all duration-700 delay-200">
