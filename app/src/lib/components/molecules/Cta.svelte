@@ -10,7 +10,7 @@
     <div class="absolute bottom-10 left-10 w-80 h-80 bg-aero-700/10 rounded-full blur-3xl"></div>
 
     <div class="container mx-auto px-4 relative z-10">
-        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center py-12 lg:py-24">
 
             <!-- Lado esquerdo: Texto e CTA -->
             <div class="space-y-8">
@@ -62,7 +62,7 @@
 
                 <div class="relative bg-gradient-to-br from-aero-900 to-aero-800 border border-aero-700 rounded-2xl p-8 lg:p-10 shadow-2xl overflow-hidden">
                     <!-- Decoração do card -->
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-gold-base/5 rounded-full -translate-y-16 translate-x-16"></div>
+                    <div class="border border-gold-glow absolute top-0 right-0 w-32 h-32 bg-gold-base/5 rounded-full -translate-y-16 translate-x-16"></div>
 
                     <div class="relative space-y-8">
                         <!-- Cabeçalho -->
@@ -76,8 +76,8 @@
                         <div class="space-y-6">
                             <div class="flex gap-4">
                                 <div>
-                                    <h4 class="text-lg font-semibold text-aero-50 mb-2">DA Aviação - Sede</h4>
-                                    <p>Endereço:</p>
+                                    <h4 class="text-lg font-bold text-aero-50 mb-2">DA Aviação - Sede</h4>
+                                    <p class="font-semibold">Endereço:</p>
                                     <p class="text-aero-300 leading-relaxed">
                                         Rua José Fonzar 2263 <br> Jardim Recanto dos Pássaros <br> Birigui - SP
                                     </p>
@@ -86,9 +86,9 @@
 
                             <div class="flex gap-4">
                                 <div>
-                                    <h4 class="text-lg font-semibold text-aero-50 mb-2">Horário de Recebimento</h4>
+                                    <h4 class="text-lg font-semibold text-aero-50 mb-2">Horário de Recebimento:</h4>
                                     <p class="text-aero-300">
-                                        <span class="font-medium">Segunda a Sexta</span><br>
+                                        <span class="font-semibold text-aero-50">Segunda a Sexta</span><br>
                                         07:30 às 17:30
                                     </p>
                                 </div>
