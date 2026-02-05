@@ -4,7 +4,6 @@
  import Button from '$lib/components/atoms/Button.svelte';
  import ContactLink from '$lib/components/atoms/ContactLink.svelte';
  import { slide } from 'svelte/transition';
- import { page } from '$app/stores';
 
  let isMenuOpen = false;
 

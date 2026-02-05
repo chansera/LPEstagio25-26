@@ -4,7 +4,6 @@
   export let number: string;
   export let email: string;
   export let label: string;
-  export let variant: 'inline' | 'button' = 'inline';
 
   $: href = tipo === 'whatsapp'
     ? `https://wa.me/${number?.replace(/\D/g, '') || ''}`

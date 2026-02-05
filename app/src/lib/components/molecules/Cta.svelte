@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
  import Button from '$lib/components/atoms/Button.svelte';
  import { SITE_INFO } from '$lib/constants';
 </script>
@@ -30,7 +30,7 @@
                 <!-- Botões -->
                 <div class="flex flex-col sm:flex-row gap-5">
                     <Button
-                        href="https://wa.me/{SITE_INFO.numRegina}"
+                        href="https://wa.me/{SITE_INFO.regina}"
                         target="_blank"
                         variant="primary"
                         class="group bg-gold-gradient text-aero-950 font-bold px-8 py-4 rounded-lg hover:scale-[1.02] transition-all duration-300 shadow-lg shadow-gold-base/20 hover:shadow-xl hover:shadow-gold-base/30"

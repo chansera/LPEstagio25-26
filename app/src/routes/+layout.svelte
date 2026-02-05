@@ -1,4 +1,4 @@
-<script lang="ts">
+<Script lang="ts">
  import Header from '$lib/components/organisms/Header.svelte';
  import Footer from '$lib/components/organisms/Footer.svelte';
  import './layout.css';
