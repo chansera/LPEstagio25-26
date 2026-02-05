@@ -4,8 +4,9 @@
  import Button from '$lib/components/atoms/Button.svelte';
  import ContactLink from '$lib/components/atoms/ContactLink.svelte';
  import { slide } from 'svelte/transition';
+ import { page } from '$app/state';
 
- let isMenuOpen = false;
+ let {isMenuOpen = false} = $props();
 
  function toggleMenu() {
      isMenuOpen = !isMenuOpen;
@@ -30,7 +31,6 @@
             label="(18) 99783-1844 (FInanceiro)"
         />
         <ContactLink
-            type="email"
             email={SITE_INFO.email}
             label={SITE_INFO.email}
         />
@@ -59,12 +59,12 @@
                 <a
                     href={link.href}
                     class="text-sm font-semibold relative py-2 transition-colors
-                         {$page.url.pathname === link.href
+                         {page.url.pathname === link.href
                          ? 'text-brand'
                          : 'text-gray-600 hover:text-brand'}"
                 >
                     {link.name}
-                    {#if $page.url.pathname === link.href}
+                    {#if page.url.pathname === link.href}
                         <span class="absolute bottom-0 left-0 w-full h-0.5 bg-brand rounded-full"></span>
                     {/if}
                 </a>
@@ -77,7 +77,7 @@
 
         <button
             class="md:hidden text-gray-700 hover:text-brand focus:outline-none p-2"
-            on:click={toggleMenu}
+            onclick={toggleMenu}
             aria-expanded={isMenuOpen}
             aria-label="Menu"
         >
@@ -100,13 +100,13 @@
                     <a
                         href={link.href}
                         class="text-xl font-semibold py-2 transition-colors text-center
-                             {$page.url.pathname === link.href
+                             {page.url.pathname === link.href
                              ? 'text-brand'
                              : 'text-gray-800 hover:text-brand'}"
-                        on:click={closeMenu}
+                        onclick={closeMenu}
                     >
                         {link.name}
-                        {#if $page.url.pathname === link.href}
+                        {#if page.url.pathname === link.href}
                             <span class="block w-10 h-0.5 bg-brand mx-auto mt-1 rounded-full"></span>
                         {/if}
                     </a>
