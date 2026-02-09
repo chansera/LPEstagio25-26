@@ -2,7 +2,7 @@
  import logoImg from '$lib/assets/logo.png';
  import { SITE_INFO, SITE_ROUTES } from '$lib/constants';
  import Button from '$lib/components/atoms/Button.svelte';
- import ContactLink from '$lib/components/atoms/ContactLink.svelte';
+ import ContactLink from '$lib/components/atoms/Contactlink/ContactLink.svelte';
  import { slide } from 'svelte/transition';
  import { page } from '$app/state';
 
@@ -16,26 +16,27 @@
      isMenuOpen = false;
  }
 </script>
-
 <div class="hidden md:block bg-black border-b border-gray-200 text-xs py-2">
     <div class="container mx-auto px-4 flex justify-end items-center gap-6 text-white font-medium tracking-wide">
         <ContactLink
             type="whatsapp"
-            number={SITE_INFO.regina}
-            label="(18) 99783-1844 (Regina)"
+            value={SITE_INFO.regina}
+            label="Regina:"
         />
 
         <ContactLink
             type="whatsapp"
-            number={SITE_INFO.financeiro}
-            label="(18) 99783-1844 (FInanceiro)"
+            value={SITE_INFO.financeiro}
+            label="FInanceiro"
         />
         <ContactLink
-            email={SITE_INFO.email}
-            label={SITE_INFO.email}
+            type="email"
+            value={SITE_INFO.email}
+            label="Email:"
         />
     </div>
 </div>
+
 
 <header id="main-header" class="sticky top-0 z-50 bg-white transition-all duration-300 border-b border-gray-100">
     <div class="container mx-auto px-4 h-20 flex justify-between items-center">

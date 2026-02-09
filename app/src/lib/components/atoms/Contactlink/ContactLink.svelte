@@ -1,0 +1,56 @@
+<script lang="ts">
+ import type { ContactProps } from '$lib/types/contact';
+
+let {
+    label,
+    value = "",
+    type,
+    baseclass  = "flex items-center gap-2",
+    labelClass = "text-gray-500",
+    valueClass = "font-medium"
+ }: ContactProps = $props();
+
+ // 1. Lógica para o LINK (Sempre limpo para o WhatsApp/Telefone funcionar)
+ let href = $derived.by(() => {
+     const safeValue = String(value || "");
+     const clean = safeValue.replace(/\D/g, ''); // Remove tudo que não é número
+
+     if (type === 'whatsapp') return `https://wa.me/${clean}`;
+     if (type === 'tel') return `tel:${clean}`;
+     return `mailto:${safeValue}`;
+ });
+
+ // 2. Lógica para EXIBIÇÃO (Coloca a máscara (18) 99999-9999)
+ let displayValue = $derived.by(() => {
+     const digits = String(value || "").replace(/\D/g, '');
+
+     // Se for celular com DDI (Ex: 5518997831844)
+     if (digits.length === 13 && digits.startsWith('55')) {
+         return `(${digits.slice(2, 4)}) ${digits.slice(4, 9)}-${digits.slice(9)}`;
+     }
+
+     // Se for celular sem DDI (Ex: 18997831844)
+     if (digits.length === 11) {
+         return `(${digits.slice(0, 2)}) ${digits.slice(2, 7)}-${digits.slice(7)}`;
+     }
+
+     // Se for telefone fixo (Ex: 1836425048)
+     if (digits.length === 10) {
+         return `(${digits.slice(0, 2)}) ${digits.slice(2, 6)}-${digits.slice(6)}`;
+     }
+
+     return value; // Fallback: se não reconhecer o padrão, mostra como está
+ });
+</script>
+
+<a
+    href={href}
+    target={type === 'whatsapp' ? '_blank' : undefined}
+    rel={type === 'whatsapp' ? 'noopener noreferrer' : undefined}
+    class="group transition-colors {baseclass}"
+>
+    {#if label}
+        <span class={labelClass}>{label}</span>
+    {/if}
+    <span class={valueClass}>{displayValue}</span>
+</a>

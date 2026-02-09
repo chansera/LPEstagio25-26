@@ -1,6 +1,8 @@
 <script lang="ts">
  import logoImg from '$lib/assets/logo.png';
- const currentYear = new Date().getFullYear();
+ import {SITE_INFO} from '$lib/constants';
+ import ContactLink from '$lib/components/atoms/Contactlink/ContactLink.svelte';
+ const {currentYear = new Date().getFullYear()} = $props();
 </script>
 
 <footer class="bg-black border border-gold-glow text-gray-300 font-sans">
@@ -39,14 +41,10 @@
             <div class="flex flex-col items-center md:items-start text-center md:text-left">
                 <h4 class="font-bold text-white text-lg mb-6">Navegação</h4>
                 <ul class="space-y-4 text-sm w-full">
+                    <li><a href="/"  class="text-gray-400 hover:text-brand transition-colors">Início</a></li>
                     <li><a href="/servicos"  class="text-gray-400 hover:text-brand transition-colors">Serviços</a></li>
                     <li><a href="/sobre"  class="text-gray-400 hover:text-brand transition-colors">Sobre Nós</a></li>
                     <li><a href="/contato"  class="text-gray-400 hover:text-brand transition-colors">Contato</a></li>
-                    <li class="pt-4 mt-2 border-t border-gray-800 w-full md:w-32 mx-auto md:mx-0">
-                        <a href="#" class="text-xs text-gray-500 hover:text-brand uppercase tracking-wider font-semibold">
-                            ↑ Voltar ao Topo
-                        </a>
-                    </li>
                 </ul>
             </div>
 
@@ -54,28 +52,40 @@
                 <h4 class="font-bold text-white text-lg mb-6">Canais de Atendimento</h4>
                 <ul class="space-y-4 text-sm w-full">
                     <li>
-                        <a href="https://wa.me/5518997831844" target="_blank" class="group flex flex-col md:flex-row items-center md:items-start gap-1 md:gap-3 hover:text-brand transition-colors">
-                            <span class="text-gray-500 text-xs uppercase w-20 text-center md:text-left">Regina</span>
-                            <span class="font-medium text-gray-300 group-hover:text-white">(18) 99783-1844</span>
-                        </a>
+                        <ContactLink type="whatsapp"
+                                     value={SITE_INFO.regina}
+                                     label= "Regina"
+                                     baseClass="group flex flex-col md:flex-row items-center md:items-start gap-1 md:gap-3 hover:text-brand transition-colors"
+                                     labelClass = "text-gray-500 text-xs uppercase w-20 text-center md:text-left"
+                                     valueClass = "font-medium text-gray-300 group-hover:text-white"
+                        />
                     </li>
                     <li>
-                        <a href="https://wa.me/5518996372444" target="_blank" class="group flex flex-col md:flex-row items-center md:items-start gap-1 md:gap-3 hover:text-brand transition-colors">
-                            <span class="text-gray-500 text-xs uppercase w-20 text-center md:text-left">Financeiro</span>
-                            <span class="font-medium text-gray-300 group-hover:text-white">(18) 99637-2444</span>
-                        </a>
+                        <ContactLink type="whatsapp"
+                                     value={SITE_INFO.financeiro}
+                                     label= "FINANCEIRO"
+                                     baseClass="group flex flex-col md:flex-row items-center md:items-start gap-1 md:gap-3 hover:text-brand transition-colors"
+                                     labelClass = "text-gray-500 text-xs uppercase w-20 text-center md:text-left"
+                                     valueClass = "font-medium text-gray-300 group-hover:text-white"
+                        />
                     </li>
                     <li>
-                        <a href="https://wa.me/5518996993184" target="_blank" class="group flex flex-col md:flex-row items-center md:items-start gap-1 md:gap-3 hover:text-brand transition-colors">
-                            <span class="text-gray-500 text-xs uppercase w-20 text-center md:text-left">Expedição</span>
-                            <span class="font-medium text-gray-300 group-hover:text-white">(18) 99699-3184</span>
-                        </a>
+                        <ContactLink type="whatsapp"
+                                     value={SITE_INFO.expedicao}
+                                     label= "EXPEDIÇÃO"
+                                     baseclass="group flex flex-col md:flex-row items-center md:items-start gap-1 md:gap-3 hover:text-brand transition-colors"
+                                     labelClass = "text-gray-500 text-xs uppercase w-20 text-center md:text-left"
+                                     valueClass = "font-medium text-gray-300 group-hover:text-white"
+                        />
                     </li>
                     <li class="pt-2">
-                        <a href="tel:+551836425048" class="group flex flex-col md:flex-row items-center md:items-start gap-1 md:gap-3 hover:text-brand transition-colors">
-                            <span class="text-gray-500 text-xs uppercase w-20 text-center md:text-left">Fixo</span>
-                            <span class="font-medium text-gray-300 group-hover:text-white">(18) 3642-5048</span>
-                        </a>
+                        <ContactLink type="tel"
+                                     value={SITE_INFO.financeiro}
+                                     label= "REGINA"
+                                     baseclass="group flex flex-col md:flex-row items-center md:items-start gap-1 md:gap-3 hover:text-brand transition-colors"
+                                     labelClass = "text-gray-500 text-xs uppercase w-20 text-center md:text-left"
+                                     valueClass = "font-medium text-gray-300 group-hover:text-white"
+                        />
                     </li>
                 </ul>
             </div>
