@@ -1,13 +1,13 @@
 <script lang="ts">
- import type { ContactProps } from '$lib/types/contact';
+ import type { ContactProps } from './ContactLink.types';
 
 let {
     label,
     value = "",
     type,
-    baseclass  = "flex items-center gap-2",
-    labelClass = "text-gray-500",
-    valueClass = "font-medium"
+    baseClass  = " gap-2",
+    labelClass = "text-aero-500 text-sm hover:text-aero-100",
+    valueClass = "text-aero-50 text-sm hover:text-aero-300"
  }: ContactProps = $props();
 
  // 1. Lógica para o LINK (Sempre limpo para o WhatsApp/Telefone funcionar)
@@ -47,10 +47,8 @@ let {
     href={href}
     target={type === 'whatsapp' ? '_blank' : undefined}
     rel={type === 'whatsapp' ? 'noopener noreferrer' : undefined}
-    class="group transition-colors {baseclass}"
+    class="group transition-colors {baseClass}"
 >
-    {#if label}
-        <span class={labelClass}>{label}</span>
-    {/if}
+    <span class={labelClass}>{label}</span>
     <span class={valueClass}>{displayValue}</span>
 </a>

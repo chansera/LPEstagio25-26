@@ -1,7 +1,7 @@
 <script lang="ts">
  import logoImg from '$lib/assets/logo.png';
- import {SITE_INFO} from '$lib/constants';
- import ContactLink from '$lib/components/atoms/Contactlink/ContactLink.svelte';
+ import {CONTACT_LIST} from '$lib/constants';
+ import ContactList from '$lib/components/molecules/ContactList/ContactList.svelte';
  const {currentYear = new Date().getFullYear()} = $props();
 </script>
 
@@ -50,57 +50,19 @@
 
             <div class="flex flex-col items-center md:items-start text-center md:text-left">
                 <h4 class="font-bold text-white text-lg mb-6">Canais de Atendimento</h4>
-                <ul class="space-y-4 text-sm w-full">
-                    <li>
-                        <ContactLink type="whatsapp"
-                                     value={SITE_INFO.regina}
-                                     label= "Regina"
-                                     baseClass="group flex flex-col md:flex-row items-center md:items-start gap-1 md:gap-3 hover:text-brand transition-colors"
-                                     labelClass = "text-gray-500 text-xs uppercase w-20 text-center md:text-left"
-                                     valueClass = "font-medium text-gray-300 group-hover:text-white"
-                        />
-                    </li>
-                    <li>
-                        <ContactLink type="whatsapp"
-                                     value={SITE_INFO.financeiro}
-                                     label= "FINANCEIRO"
-                                     baseClass="group flex flex-col md:flex-row items-center md:items-start gap-1 md:gap-3 hover:text-brand transition-colors"
-                                     labelClass = "text-gray-500 text-xs uppercase w-20 text-center md:text-left"
-                                     valueClass = "font-medium text-gray-300 group-hover:text-white"
-                        />
-                    </li>
-                    <li>
-                        <ContactLink type="whatsapp"
-                                     value={SITE_INFO.expedicao}
-                                     label= "EXPEDIÇÃO"
-                                     baseclass="group flex flex-col md:flex-row items-center md:items-start gap-1 md:gap-3 hover:text-brand transition-colors"
-                                     labelClass = "text-gray-500 text-xs uppercase w-20 text-center md:text-left"
-                                     valueClass = "font-medium text-gray-300 group-hover:text-white"
-                        />
-                    </li>
-                    <li class="pt-2">
-                        <ContactLink type="tel"
-                                     value={SITE_INFO.financeiro}
-                                     label= "REGINA"
-                                     baseclass="group flex flex-col md:flex-row items-center md:items-start gap-1 md:gap-3 hover:text-brand transition-colors"
-                                     labelClass = "text-gray-500 text-xs uppercase w-20 text-center md:text-left"
-                                     valueClass = "font-medium text-gray-300 group-hover:text-white"
-                        />
-                    </li>
-                </ul>
+                <ContactList contacts= {CONTACT_LIST} />
             </div>
 
         </div>
     </div>
-
-    <div class="bg-aero-950 border-t border-gold-glow py-6">
-        <div class="container mx-auto px-4 flex flex-col items-center justify-center text-center space-y-2">
-            <p class="text-xs text-aero-100">
-                &copy; {currentYear} D.A Aviação. Todos os direitos reservados.
-            </p>
-            <p class="text-xs text-gray-100">
-                Precisão e segurança em manutenção aeronáutica.
-            </p>
+        <div class="bg-aero-950 border-t border-gold-glow py-6">
+            <div class="container mx-auto px-4 flex flex-col items-center justify-center text-center space-y-2">
+                <p class="text-xs text-aero-100">
+                    &copy; {currentYear} D.A Aviação. Todos os direitos reservados.
+                </p>
+                <p class="text-xs text-gray-100">
+                    Precisão e segurança em manutenção aeronáutica.
+                </p>
+            </div>
         </div>
-    </div>
 </footer>

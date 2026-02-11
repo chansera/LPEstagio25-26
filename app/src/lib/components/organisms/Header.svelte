@@ -1,6 +1,6 @@
 <script lang="ts">
  import logoImg from '$lib/assets/logo.png';
- import { SITE_INFO, SITE_ROUTES } from '$lib/constants';
+ import { CONTACT_LIST, SITE_INFO, SITE_ROUTES } from '$lib/constants';
  import Button from '$lib/components/atoms/Button.svelte';
  import ContactLink from '$lib/components/atoms/Contactlink/ContactLink.svelte';
  import { slide } from 'svelte/transition';
@@ -27,7 +27,7 @@
         <ContactLink
             type="whatsapp"
             value={SITE_INFO.financeiro}
-            label="FInanceiro"
+            label="Financeiro:"
         />
         <ContactLink
             type="email"
@@ -115,7 +115,7 @@
             </nav>
 
             <div class="border-t border-gray-100 w-full pt-6 mt-auto">
-                <Button href="https://wa.me/{SITE_INFO.financeiro}" target="_blank" variant="primary" class="w-full" on:click={closeMenu}>
+                <Button href="https://wa.me/{CONTACT_LIST.financeiro}" target="_blank" variant="primary" class="w-full" on:click={closeMenu}>
                     Orçamento
                 </Button>
             </div>

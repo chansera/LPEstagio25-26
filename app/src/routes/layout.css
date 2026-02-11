@@ -1,46 +1,45 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&display=swap");
 @import "tailwindcss";
 
 @theme {
-  /* --- PALETA AERO (Cinzas Metálicos/Frios) --- */
-  /* Substitui o cinza neutro por algo com "alma" de metal e céu */
-  --color-aero-50: #f8fafc;  /* Branco Titânio */
-  --color-aero-100: #f1f5f9; /* Gelo */
-  --color-aero-200: #e2e8f0; /* Alumínio Fosco */
-  --color-aero-300: #cbd5e1; /* Prata */
-  --color-aero-400: #94a3b8; /* Chumbo Claro */
-  --color-aero-500: #64748b; /* Aço Estrutural (Texto Secundário) */
-  --color-aero-600: #475569; /* Fuselagem Escura */
-  --color-aero-700: #334155; /* Ferro */
-  --color-aero-800: #1e293b; /* Cinza Petróleo (Fundos Escuros) */
-  --color-aero-900: #0f172a; /* Cockpit (Quase preto, toque azulado) */
-  --color-aero-950: #020617; /* Espaço Noturno (Preto Profundo) */
+    /* --- PALETA AERO (Cinzas Metálicos/Frios) --- */
+    /* Substitui o cinza neutro por algo com "alma" de metal e céu */
+    --color-aero-50: #f8fafc;  /* Branco Titânio */
+    --color-aero-100: #f1f5f9; /* Gelo */
+    --color-aero-200: #e2e8f0; /* Alumínio Fosco */
+    --color-aero-300: #cbd5e1; /* Prata */
+    --color-aero-400: #DDDDDD; /* Chumbo Claro */
+    --color-aero-500: #64748b; /* Aço Estrutural (Texto Secundário) */
+    --color-aero-600: #475569; /* Fuselagem Escura */
+    --color-aero-700: #334155; /* Ferro */
+    --color-aero-800: #1e293b; /* Cinza Petróleo (Fundos Escuros) */
+    --color-aero-900: #0f172a; /* Cockpit (Quase preto, toque azulado) */
+    --color-aero-950: #020617; /* Espaço Noturno (Preto Profundo) */
 
-  /* --- PALETA GOLD (Ouro Aviação) --- */
-  --color-gold-light: #FCEebb; /* Reflexo de Luz */
-  --color-gold-base: #C5A059;  /* Ouro Metálico (Cor Principal) */
-  --color-gold-dark: #967839;  /* Bronze Antigo (Sombras) */
-  --color-gold-rich: #B3882A;  /* Ouro Rico (Para gradientes) */
+    /* --- PALETA GOLD (Ouro Aviação) --- */
+    --color-gold-light: #FCEebb; /* Reflexo de Luz */
+    --color-gold-base: #C5A059;  /* Ouro Metálico (Cor Principal) */
+    --color-gold-dark: #967839;  /* Bronze Antigo (Sombras) */
+    --color-gold-rich: #C5A028 ;  /* Ouro Rico (Para gradientes) */
 
-  /* --- CORES SEMÂNTICAS --- */
-  --color-brand: var(--color-gold-base);
-  --color-surface: var(--color-aero-900); /* Cor de fundo padrão dos cards */
-  --color-canvas: var(--color-aero-950);  /* Cor de fundo do site */
+    /* --- CORES SEMÂNTICAS --- */
+    --color-brand: var(--color-gold-base);
+    --color-surface: var(--color-aero-900); /* Cor de fundo padrão dos cards */
+    --color-canvas: var(--color-aero-950);  /* Cor de fundo do site */
 }
 
 @layer base {
-  body {
-    background-color: var(--color-canvas);
-    color: var(--color-aero-100);
-    font-family: 'Inter', system-ui, sans-serif; /* Fonte limpa e técnica */
-    -webkit-font-smoothing: antialiased;
-  }
+    body {
+        background-color: var(--color-canvas);
+        color: var(--color-aero-100);
+        font-family: 'Inter', system-ui, sans-serif; /* Fonte limpa e técnica */
+        -webkit-font-smoothing: antialiased;
+    }
 
-  /* Títulos em branco titânio para contraste máximo */
-  h1, h2, h3, h4, h5, h6 {
-    color: var(--color-aero-50);
-    letter-spacing: -0.025em; /* Deixa o texto mais compacto/moderno */
-  }
+    /* Títulos em branco titânio para contraste máximo */
+    h1, h2, h3, h4, h5, h6 {
+        color: var(--color-aero-50);
+        letter-spacing: -0.025em; /* Deixa o texto mais compacto/moderno */
+    }
 }
 
 /* --- EFEITOS ESPECIAIS (A Mágica do Metal) --- */
@@ -48,183 +47,76 @@
 /* 1. TEXTO DOURADO METÁLICO
    Use em números grandes ou títulos curtos */
 .text-gold-metal {
-  background: linear-gradient(
-    to bottom right,
-    #FCEebb 0%,
-    #C5A059 40%,
-    #B3882A 60%,
-    #967839 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  filter: drop-shadow(0px 2px 0px rgba(0,0,0,0.5)); /* Sombra dura para relevo */
+    background: linear-gradient(
+        to bottom right,
+        #FCEebb 0%,
+        #C5A059 40%,
+        #B3882A 60%,
+        #967839 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0px 2px 0px rgba(0,0,0,0.5)); /* Sombra dura para relevo */
 }
 
 /* 2. TEXTO AÇO ESCOVADO
    Use em subtítulos técnicos */
 .text-steel-metal {
-  background: linear-gradient(
-    180deg,
-    #f8fafc 0%,
-    #94a3b8 50%,
-    #64748b 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+    background: linear-gradient(
+        180deg,
+        #f8fafc 0%,
+        #94a3b8 50%,
+        #64748b 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 /* 3. BORDA DOURADA ELEGANTE
    Para inputs ou cards */
 .border-gold-glow {
-  border: 1px solid var(--color-gold-dark);
-  box-shadow: 0 0 0 1px rgba(197, 160, 89, 0.1); /* Brilho interno sutil */
-  transition: all 0.3s ease;
+    border: 1px solid var(--color-gold-dark);
+    box-shadow: 0 0 0 1px rgba(197, 160, 89, 0.1); /* Brilho interno sutil */
+    transition: all 0.3s ease;
 }
 .border-gold-glow:hover {
-  border-color: var(--color-gold-base);
-  box-shadow: 0 0 10px rgba(197, 160, 89, 0.3); /* Brilho externo ao passar o mouse */
+    border-color: var(--color-gold-base);
+    box-shadow: 0 0 10px rgba(197, 160, 89, 0.3); /* Brilho externo ao passar o mouse */
 }
 
 /* 4. FUNDO GRADIENTE METÁLICO (Botões) */
 .bg-gold-gradient {
-  background: linear-gradient(
-    135deg,
-    var(--color-gold-base) 0%,
-    var(--color-gold-rich) 100%
-  );
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s ease;
+    background: linear-gradient(
+        135deg,
+        var(--color-gold-base) 0%,
+        var(--color-gold-rich) 100%
+    );
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
 }
 
 /* Efeito de brilho passando no botão ao dar hover */
 .bg-gold-gradient::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(
-    to right,
-    transparent 0%,
-    rgba(255,255,255,0.4) 50%,
-    transparent 100%
-  );
-  transform: skewX(-25deg);
-  transition: none;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        transparent 0%,
+        rgba(255,255,255,0.4) 50%,
+        transparent 100%
+    );
+    transform: skewX(-25deg);
+    transition: none;
 }
 
 .bg-gold-gradient:hover::after {
-  left: 150%;
-  transition: all 0.7s ease;
-}
-
-@mixin mQ($rem) {
-  @media screen and (min-width: $rem) {
-    @content;
-  }
-}
-
-h2 {
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.card {
-  position: relative;
-
-  &::before {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    transition: 0.6s;
-    z-index: 0;
-    background-color: #4f46e5;
-  }
-
-  &:hover {
-    box-shadow: 0.063rem 0.063rem 1.25rem 0.375rem rgb(0 0 0 / 53%);
-  }
-
-  &:nth-child(1)::before {
-    bottom: 0;
-    right: 0;
-    clip-path: circle(calc(6.25rem + 7.5vw) at 100% 100%);
-  }
-
-  &:nth-child(2)::before {
-    bottom: 0;
-    left: 0;
-    clip-path: circle(calc(6.25rem + 7.5vw) at 0% 100%);
-  }
-
-  &:nth-child(3)::before {
-    top: 0;
-    right: 0;
-    clip-path: circle(calc(6.25rem + 7.5vw) at 100% 0%);
-  }
-
-  &:nth-child(4)::before {
-    top: 0;
-    left: 0;
-    clip-path: circle(calc(6.25rem + 7.5vw) at 0% 0%);
-  }
-
-  p {
-    transition: 0.8s;
-  }
-}
-
-.card:hover::before {
-  clip-path: circle(110vw at 100% 100%);
-}
-
-.card:hover p {
-  color: #fff;
-}
-
-.circle {
-  @include mQ(62.5rem) {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-  }
-}
-
-.card:nth-child(1) .circle {
-  background: url("https://images.unsplash.com/photo-1587440871875-191322ee64b0?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
-    no-repeat 50% 50% / cover;
-  bottom: 0;
-  right: 0;
-  clip-path: circle(calc(6.25rem + 7.5vw) at 100% 100%);
-}
-
-.card:nth-child(2) .circle {
-  background: url("https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
-    no-repeat 50% 50% / cover;
-  bottom: 0;
-  left: 0;
-  clip-path: circle(calc(6.25rem + 7.5vw) at 0% 100%);
-}
-.card:nth-child(3) .circle {
-  background: url("https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
-    no-repeat 50% 50% / cover;
-  top: 0;
-  right: 0;
-  clip-path: circle(calc(6.25rem + 7.5vw) at 100% 0%);
-}
-
-.card:nth-child(4) .circle {
-  background: url("https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
-    no-repeat 50% 50% / cover;
-  top: 0;
-  left: 0;
-  clip-path: circle(calc(6.25rem + 7.5vw) at 0% 0%);
+    left: 150%;
+    transition: all 0.7s ease;
 }

@@ -1,27 +1,40 @@
 import { render, screen } from '@testing-library/svelte';
 import { expect, test } from 'vitest';
 import ContactLink from './ContactLink.svelte';
-import { SITE_INFO } from '$lib/constants';
+import type { ContactProps } from '$lib/types/contact';
 
-test('deve gerar link de whatsapp válido a partir da constante SITE_INFO', () => {
-    const props = {
+test('deve gerar link de whatsapp válido', () => {
+    // 1. ARRANGE
+    const mockData: ContactProps = {
+        id: 'test-id-1',
         label: 'Regina',
-        value: SITE_INFO.regina,
-        type: 'whatsapp' as const // "as const" ajuda o TS a inferir o tipo literal
+        value: '11333333333',
+        type: 'whatsapp'
     };
 
-    render(ContactLink, { props });
+    // 2. ACT
+    render(ContactLink, { props: mockData });
 
+    // 3. ASSERT
     const link = screen.getByRole('link');
 
-    expect(link.getAttribute('href')).toBe(`https://wa.me/${SITE_INFO.regina}`);
+    // CORREÇÃO: Usamos getAttribute() nativo e comparamos a string
+    const href = link.getAttribute('href');
+    expect(href).toBe(`https://wa.me/${mockData.value}`);
 });
 
-test('deve exibir o label financeiro lowercase', () => {
-    render(ContactLink, {
-        props: { label: 'financeiro', value: SITE_INFO.financeiro, type: 'whatsapp' as const }
-    });
+test('deve exibir o label corretamente', () => {
+    const mockData: ContactProps = {
+        id: 'test-id-2',
+        label: 'financeiro',
+        value: '11333333333',
+        type: 'whatsapp'
+    };
 
-    // O texto deve ser encontrado em CAIXA ALTA
-    expect(screen.getByText('financeiro')).toBeTruthy();
+    render(ContactLink, { props: mockData });
+
+    // CORREÇÃO: Se o getByText encontrar o elemento, ele já existe (truthy).
+    // Se não encontrar, o teste falha automaticamente antes dessa linha.
+    const elementoTexto = screen.getByText('financeiro');
+    expect(elementoTexto).toBeTruthy();
 });
