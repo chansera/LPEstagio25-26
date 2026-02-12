@@ -1,8 +1,8 @@
 <script lang="ts">
  import logoImg from '$lib/assets/logo.png';
- import { SITE_INFO, SITE_ROUTES } from '$lib/constants';
- import Button from '$lib/components/atoms/Button.svelte';
- import ContactLink from '$lib/components/atoms/ContactLink.svelte';
+ import { CONTACT_LIST, SITE_INFO, SITE_ROUTES } from '$lib/constants';
+ import LinkButton from '$lib/components/atoms/Buttons/LinkButton/LinkButton.svelte';
+ import ContactLink from '$lib/components/atoms/Contactlink/ContactLink.svelte';
  import { slide } from 'svelte/transition';
  import { page } from '$app/state';
 
@@ -16,32 +16,33 @@
      isMenuOpen = false;
  }
 </script>
-
 <div class="hidden md:block bg-black border-b border-gray-200 text-xs py-2">
     <div class="container mx-auto px-4 flex justify-end items-center gap-6 text-white font-medium tracking-wide">
         <ContactLink
-            type="whatsapp"
-            number={SITE_INFO.regina}
-            label="(18) 99783-1844 (Regina)"
+            tipo="whatsapp"
+            value={SITE_INFO.regina}
+            label="Regina:"
         />
 
         <ContactLink
             type="whatsapp"
-            number={SITE_INFO.financeiro}
-            label="(18) 99783-1844 (FInanceiro)"
+            value={SITE_INFO.financeiro}
+            label="Financeiro:"
         />
         <ContactLink
-            email={SITE_INFO.email}
-            label={SITE_INFO.email}
+            type="email"
+            value={SITE_INFO.email}
+            label="Email:"
         />
     </div>
 </div>
 
-<header id="main-header" class="sticky top-0 z-50 bg-white transition-all duration-300 border-b border-gray-100">
+
+<header class="sticky top-0 z-50 bg-white transition-all duration-300 border-b border-gray-100">
     <div class="container mx-auto px-4 h-20 flex justify-between items-center">
         <a href="/" class="flex items-center group gap-3">
             <div class="transform transition-transform group-hover:scale-105 duration-300">
-                <img src={logoImg} alt="Logo da D.A Aviação" class="h-8 w-auto sm:h-12" />
+                <img src={logoImg} alt="Logo da D.A Aviação" class="h-12 w-auto sm:h-12" />
             </div>
             <div class="flex flex-col">
                 <span class="text-xl font-bold text-gray-900 tracking-tight leading-none group-hover:text-brand transition-colors">
@@ -72,10 +73,10 @@
         </nav>
 
         <div class="hidden md:block">
-            <Button href="https://wa.me/{SITE_INFO.financeiro}" target="_blank" variant="primary">Solicitar Orçamento</Button>
+            <LinkButton type="primary" aria-label="redirecionamento para o nosso Whatsapp Financeiro" href="https://wa.me/{CONTACT_LIST[0]}" target="_blank">Solicitar Orçamento</LinkButton>
         </div>
 
-        <button
+        <linkButton
             class="md:hidden text-gray-700 hover:text-brand focus:outline-none p-2"
             onclick={toggleMenu}
             aria-expanded={isMenuOpen}
@@ -86,7 +87,7 @@
                 <span class="block w-full h-0.5 bg-current transition-all duration-300 {isMenuOpen ? 'opacity-0' : 'opacity-100'}"></span>
                 <span class="block w-full h-0.5 bg-current transition-all duration-300 {isMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}"></span>
             </div>
-        </button>
+        </linkButton>
     </div>
 
     {#if isMenuOpen}
@@ -114,9 +115,9 @@
             </nav>
 
             <div class="border-t border-gray-100 w-full pt-6 mt-auto">
-                <Button href="https://wa.me/{SITE_INFO.financeiro}" target="_blank" variant="primary" class="w-full" on:click={closeMenu}>
+                <LinkButton href="https://wa.me/{CONTACT_LIST.financeiro}" target="_blank" variant="primary" class="w-full" onclick={closeMenu}>
                     Orçamento
-                </Button>
+                </LinkButton>
             </div>
         </div>
     {/if}

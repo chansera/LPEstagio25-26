@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 <script>
   import Button from '$lib/components/atoms/Button.svelte';
 </script>
@@ -44,3 +46,4 @@
     </div>
   </div>
 </section>
+>>>>>>> eebb74c (feat: Old Timeline, but gold!)

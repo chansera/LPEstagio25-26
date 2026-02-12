@@ -1,5 +1,5 @@
 <script lang="ts">
- import Button from '$lib/components/atoms/Button.svelte';
+ import LinkButton from '$lib/components/atoms/Buttons/LinkButton/LinkButton.svelte';
  import { SITE_INFO } from '$lib/constants';
 </script>
 
@@ -29,7 +29,7 @@
 
                 <!-- Botões -->
                 <div class="flex flex-col sm:flex-row gap-5">
-                    <Button
+                    <LinkButton
                         href="https://wa.me/{SITE_INFO.regina}"
                         target="_blank"
                         variant="primary"
@@ -41,7 +41,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
                             </svg>
                         </span>
-                    </Button>
+                    </LinkButton>
 
                 </div>
 

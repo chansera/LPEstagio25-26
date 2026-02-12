@@ -1,5 +1,5 @@
 <script lang="ts">
- import Button from '$lib/components/atoms/Button.svelte';
+ import LinkButton from '$lib/components/atoms/Buttons/LinkButton/LinkButton.svelte';
  import painelImg from '$lib/assets/painel.webp';
  import { SITE_INFO } from '$lib/constants';
 </script>
@@ -35,12 +35,12 @@
                 </div>
 
                 <div class="mt-10 flex flex-col sm:flex-row items-start gap-4">
-                    <Button href="/servicos">Nossos Serviços</Button>
-                    <Button variant="secondary"
+                    <LinkButton variant="primary" href="/servicos">Nossos Serviços</LinkButton>
+                    <LinkButton variant="secondary"
                             href="https://wa.me/{SITE_INFO.regina}"
                             target="_blank">
                         Fale com um especialista &rarr;
-                    </Button>
+                    </LinkButton>
                 </div>
             </div>
 
