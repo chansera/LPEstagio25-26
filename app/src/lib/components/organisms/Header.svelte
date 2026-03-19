@@ -3,8 +3,12 @@
  import { page } from '$app/state';
  import { SITE_ROUTES, CONTATOS } from '$lib/constants';
  import logoImg from '$lib/assets/logo.png';
- import Button from '$lib/components/atoms/Button.svelte';
+ import Button from '$lib/components/atoms/Button/Button.svelte';
  import BlackStrip from '$lib/components/molecules/BlackStrip/BlackStrip.svelte';
+ import Logo from '../atoms/Logo/Logo.svelte';
+ import ContactLink from '../atoms/ContactLink/ContactLink.svelte';
+ import PhoneSvg from '../atoms/PhoneSvg.svelte';
+ import { formatWhatsAppLink } from '$lib/utils/whatsapp';
 
  let isMenuOpen = $state(false);
 
@@ -25,7 +29,7 @@
  }
 </script>
 
-<BlackStrip contatos{Object.values(CONTATOS)}/>
+<BlackStrip contatos={Object.values(CONTATOS)}/>
 <header id="main-header" class="sticky top-0 z-50 bg-white transition-all duration-300 border-b border-gray-100">
     <div class="container mx-auto px-4 h-20 flex justify-between items-center">
 
@@ -50,7 +54,10 @@
         </nav>
 
         <div class="hidden md:block">
-            <Button href="https://wa.me/{CONTATOS.financeiro.numero}" target="_blank" variant="primary">Solicitar Orçamento</Button>
+            <Button href={formatWhatsAppLink(CONTATOS.financeiro.numero)} variant="primary">
+                <PhoneSvg/>
+                <span>Solicitar Orçamento</span>
+            </Button>
         </div>
 
         <!-- Botão Mobile -->
@@ -95,9 +102,10 @@
             </nav>
 
             <div class="border-t border-gray-100 w-full pt-6 mt-auto">
-                <Button href="https://wa.me/{CONTATOS.financeiro.numero}" variant="primary" className="w-full" >
-                    Orçamento
-                </Button>
+            <Button href={formatWhatsAppLink(CONTATOS.financeiro.numero)} variant="primary">
+                <PhoneSvg/>
+                <span>Solicitar Orçamento</span>
+            </Button>
             </div>
         </div>
     {/if}

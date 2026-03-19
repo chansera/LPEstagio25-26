@@ -10,7 +10,7 @@ export const SITE_INFO = {
 
 export const CONTATOS = {
     comercial: { name: 'Comercial', numero: '(18) 99783-1844' },
-    financeiro: { name: 'Orçamento/Financeiro', numero: '(18)99745-0646' },
+    financeiro: { name: 'Orçamento/Financeiro', numero: '(18) 99745-0646' },
     regulamentacao: { name: 'Regulamentação', numero: '(18) 99783-1844' },
 } as const;
 

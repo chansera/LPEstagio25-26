@@ -1,5 +1,5 @@
 <script>
-  import Button from '$lib/components/atoms/Button.svelte';
+  import Button from '$lib/components/atoms/Button/Button.svelte';
 </script>
 
 <section class="min-h-screen bg-gray-900 text-center py-20 px-8 xl:px-0 flex flex-col justify-center">

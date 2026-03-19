@@ -1,5 +1,5 @@
 <script lang="ts">
- import Button from '$lib/components/atoms/Button.svelte';
+ import Button from '$lib/components/atoms/Button/Button.svelte';
  import { SITE_INFO } from '$lib/constants';
 </script>
 
@@ -33,7 +33,7 @@
                         href="https://wa.me/{SITE_INFO.regina}"
                         target="_blank"
                         variant="primary"
-                        class="group bg-gold-gradient text-aero-950 font-bold px-8 py-4 rounded-lg hover:scale-[1.02] transition-all duration-300 shadow-lg shadow-gold-base/20 hover:shadow-xl hover:shadow-gold-base/30"
+                        className="group bg-gold-gradient text-aero-950 font-bold px-8 py-4 rounded-lg hover:scale-[1.02] transition-all duration-300 shadow-lg shadow-gold-base/20 hover:shadow-xl hover:shadow-gold-base/30"
                     >
                         <span class="flex items-center gap-3">
                             Falar com Especialista
