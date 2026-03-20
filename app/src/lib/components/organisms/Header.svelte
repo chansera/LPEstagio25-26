@@ -1,12 +1,11 @@
 <script lang="ts">
  import { slide } from 'svelte/transition';
  import { page } from '$app/state';
- import { SITE_ROUTES, CONTATOS } from '$lib/constants';
+ import { SITE_ROUTES, CONTATOS, getContatosArray } from '$lib/constants';
  import logoImg from '$lib/assets/logo.png';
  import Button from '$lib/components/atoms/Button/Button.svelte';
  import BlackStrip from '$lib/components/molecules/BlackStrip/BlackStrip.svelte';
  import Logo from '../atoms/Logo/Logo.svelte';
- import ContactLink from '../atoms/ContactLink/ContactLink.svelte';
  import PhoneSvg from '../atoms/PhoneSvg.svelte';
  import { formatWhatsAppLink } from '$lib/utils/whatsapp';
 
@@ -20,6 +19,7 @@
      isMenuOpen = false;
  }
 
+ let contatos = getContatosArray()
  let currentPath = $derived(page.url.pathname);
 
  function isActive(href: string): boolean {
@@ -29,7 +29,7 @@
  }
 </script>
 
-<BlackStrip contatos={Object.values(CONTATOS)}/>
+<BlackStrip contatos={contatos}/>
 <header id="main-header" class="sticky top-0 z-50 bg-white transition-all duration-300 border-b border-gray-100">
     <div class="container mx-auto px-4 h-20 flex justify-between items-center">
 
