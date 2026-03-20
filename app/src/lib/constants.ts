@@ -1,4 +1,5 @@
 // src/lib/constants.ts
+import { formatWhatsAppLink } from "./utils/whatsapp";
 
 export const SITE_INFO = {
   nome: 'D.A Aviação',
@@ -25,3 +26,12 @@ export const SITE_ROUTES = [
   { name: 'Sobre', href: '/sobre' },
   { name: 'Contato', href: '/contato' }
 ] as const satisfies NavLink[];
+// src/lib/constants.ts
+
+export const getContatosArray = () => {
+  return Object.values(CONTATOS).map(contato => ({
+    name: contato.name,
+    numero: contato.numero,
+    href: formatWhatsAppLink(contato.numero)
+  }));
+};

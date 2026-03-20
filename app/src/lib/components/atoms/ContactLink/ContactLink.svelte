@@ -1,11 +1,9 @@
 <script lang="ts">
   import PhoneSvg from '$lib/components/atoms/PhoneSvg.svelte';
   import type { ContactProps } from './ContactLink.type';
-  import { formatWhatsAppLink } from '$lib/utils/whatsapp';
 
-  let { numero, contactName }: ContactProps = $props();
+  let { href, numero, contactName }: ContactProps = $props();
 
-  let href = $derived(formatWhatsAppLink(numero));
 </script>
 
 <a
