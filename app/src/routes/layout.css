@@ -2,244 +2,244 @@
 @import "tailwindcss";
 
 @theme {
-  /* --- PALETA AERO (Cinzas Metálicos/Frios) --- */
-  --color-aero-50: #f8fafc;
-  --color-aero-100: #f1f5f9;
-  --color-aero-200: #e2e8f0;
-  --color-aero-300: #cbd5e1;
-  --color-aero-400: #94a3b8;
-  --color-aero-500: #64748b;
-  --color-aero-600: #475569;
-  --color-aero-700: #334155;
-  --color-aero-800: #1e293b;
-  --color-aero-900: #0f172a;
-  --color-aero-950: #020617;
+    /* --- PALETA AERO (Cinzas Metálicos/Frios) --- */
+    --color-aero-50: #f8fafc;
+    --color-aero-100: #f1f5f9;
+    --color-aero-200: #e2e8f0;
+    --color-aero-300: #cbd5e1;
+    --color-aero-400: #94a3b8;
+    --color-aero-500: #64748b;
+    --color-aero-600: #475569;
+    --color-aero-700: #334155;
+    --color-aero-800: #1e293b;
+    --color-aero-900: #0f172a;
+    --color-aero-950: #020617;
 
-  /* --- PALETA GOLD (Ouro Aviação) --- */
-  --color-gold-light: #FCEebb;
-  --color-gold-base: #C5A059;
-  --color-gold-dark: #967839;
-  --color-gold-rich: #B3882A;
+    /* --- PALETA GOLD (Ouro Aviação) --- */
+    --color-gold-light: #FCEebb;
+    --color-gold-base: #C5A059;
+    --color-gold-dark: #967839;
+    --color-gold-rich: #B3882A;
 
-  /* --- CORES SEMÂNTICAS --- */
-  --color-brand: var(--color-gold-base);
-  --color-surface: var(--color-aero-900);
-  --color-canvas: var(--color-aero-950);
+    /* --- CORES SEMÂNTICAS --- */
+    --color-brand: var(--color-gold-base);
+    --color-surface: var(--color-aero-900);
+    --color-canvas: var(--color-aero-950);
 }
 
 @layer base {
-  body {
-    background-color: var(--color-canvas);
-    color: var(--color-aero-100);
-    font-family: 'Inter', system-ui, sans-serif;
-    -webkit-font-smoothing: antialiased;
-  }
+    body {
+        background-color: var(--color-canvas);
+        color: var(--color-aero-100);
+        font-family: 'Inter', system-ui, sans-serif;
+        -webkit-font-smoothing: antialiased;
+    }
 
-  h1, h2, h3, h4, h5, h6 {
-    color: var(--color-aero-50);
-    letter-spacing: -0.025em;
-  }
+    h1, h2, h3, h4, h5, h6 {
+        color: var(--color-aero-50);
+        letter-spacing: -0.025em;
+    }
 }
 
 /* --- EFEITOS ESPECIAIS (A Mágica do Metal) --- */
 
 .text-gold-metal {
-  background: linear-gradient(to bottom right, #FCEebb 0%, #C5A059 40%, #B3882A 60%, #967839 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  filter: drop-shadow(0px 2px 0px rgba(0,0,0,0.5));
+    background: linear-gradient(to bottom right, #FCEebb 0%, #C5A059 40%, #B3882A 60%, #967839 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0px 2px 0px rgba(0,0,0,0.5));
 }
 
 .bg-steel-metal {
-  background: linear-gradient(180deg, #f8fafc 0%, #94a3b8 50%, #64748b 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+    background: linear-gradient(180deg, #f8fafc 0%, #94a3b8 50%, #64748b 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 .border-gold-glow {
-  border: 1px solid var(--color-gold-dark);
-  box-shadow: 0 0 0 1px rgba(197, 160, 89, 0.1);
-  transition: all 0.3s ease;
+    border: 1px solid var(--color-gold-dark);
+    box-shadow: 0 0 0 1px rgba(197, 160, 89, 0.1);
+    transition: all 0.3s ease;
 }
 .border-gold-glow:hover {
-  border-color: var(--color-gold-base);
-  box-shadow: 0 0 10px rgba(197, 160, 89, 0.3);
+    border-color: var(--color-gold-base);
+    box-shadow: 0 0 10px rgba(197, 160, 89, 0.3);
 }
 
 .bg-gold-gradient {
-  background: linear-gradient(135deg, var(--color-gold-base) 0%, var(--color-gold-rich) 100%);
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s ease;
+    background: linear-gradient(135deg, var(--color-gold-base) 0%, var(--color-gold-rich) 100%);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
 }
 
 .bg-gold-gradient::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(to right, transparent 0%, rgba(255,255,255,0.4) 50%, transparent 100%);
-  transform: skewX(-25deg);
-  transition: none;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, transparent 0%, rgba(255,255,255,0.4) 50%, transparent 100%);
+    transform: skewX(-25deg);
+    transition: none;
 }
 
 .bg-gold-gradient:hover::after {
-  left: 150%;
-  transition: all 0.7s ease;
+    left: 150%;
+    transition: all 0.7s ease;
 }
 
 h2 {
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 /* --- BOTÕES PRIMARY (dourado) --- */
 .btn-primary {
-  @apply relative overflow-hidden bg-gradient-to-br from-gold-base to-gold-rich text-aero-50 font-bold px-8 py-4 rounded-lg shadow-lg shadow-gold-base/20 transition-all duration-300;
+    @apply relative overflow-hidden bg-gradient-to-br from-gold-base to-gold-rich text-aero-50 font-bold px-8 py-4 rounded-lg shadow-lg shadow-gold-base/20 transition-all duration-300;
 }
 .btn-primary:hover {
-  @apply scale-[1.02] shadow-xl shadow-gold-base/30;
+    @apply scale-[1.02] shadow-xl shadow-gold-base/30;
 }
 .btn-primary::after {
-  content: '';
-  @apply absolute top-0 -left-full w-1/2 h-full bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-[-25deg] transition-all duration-700;
+    content: '';
+    @apply absolute top-0 -left-full w-1/2 h-full bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-[-25deg] transition-all duration-700;
 }
 .btn-primary:hover::after {
-  @apply left-full;
+    @apply left-full;
 }
 
 /* --- BOTÃO PRIMARY PRETO (metálico escuro) --- */
 .btn-secondary {
-  @apply relative overflow-hidden bg-gradient-to-br from-aero-800 to-aero-950 text-aero-100 font-bold px-8 py-4 rounded-lg shadow-lg shadow-aero-900/50 transition-all duration-300;
+    @apply relative overflow-hidden bg-gradient-to-br from-aero-800 to-aero-950 text-aero-100 font-bold px-8 py-4 rounded-lg shadow-lg shadow-aero-900/50 transition-all duration-300;
 }
 .btn-secondary:hover {
-  @apply scale-[1.02] shadow-xl shadow-aero-800/60;
+    @apply scale-[1.02] shadow-xl shadow-aero-800/60;
 }
 .btn-secondary::after {
-  content: '';
-  @apply absolute top-0 -left-full w-1/2 h-full bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-[-25deg] transition-all duration-700;
+    content: '';
+    @apply absolute top-0 -left-full w-1/2 h-full bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-[-25deg] transition-all duration-700;
 }
 .btn-secondary:hover::after {
-  @apply left-full;
+    @apply left-full;
 }
 
 /* --- BOTÃO PRIMARY CLARO (metálico claro) --- */
 .btn-outline {
-  @apply relative overflow-hidden bg-gradient-to-br from-aero-100 to-aero-300 text-aero-900 font-bold px-8 py-4 rounded-lg shadow-lg shadow-aero-300/70 transition-all duration-300;
+    @apply relative overflow-hidden bg-gradient-to-br from-aero-100 to-aero-300 text-aero-900 font-bold px-8 py-4 rounded-lg shadow-lg shadow-aero-300/70 transition-all duration-300;
 }
 .btn-outline:hover {
-  @apply scale-[1.02] shadow-xl shadow-aero-400/60;
+    @apply scale-[1.02] shadow-xl shadow-aero-400/60;
 }
 .btn-outline::after {
-  content: '';
-  @apply absolute top-0 -left-full w-1/2 h-full bg-gradient-to-r from-transparent via-black/10 to-transparent skew-x-[-25deg] transition-all duration-700;
+    content: '';
+    @apply absolute top-0 -left-full w-1/2 h-full bg-gradient-to-r from-transparent via-black/10 to-transparent skew-x-[-25deg] transition-all duration-700;
 }
 .btn-outline:hover::after {
-  @apply left-full;
+    @apply left-full;
 }
 
 /* --- CARDS (convertido de SCSS para CSS puro) --- */
 .card {
-  position: relative;
+    position: relative;
 }
 
 .card::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  transition: 0.6s;
-  z-index: 0;
-  background-color: #4f46e5; /* Ajuste para uma cor do seu tema se desejar */
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    transition: 0.6s;
+    z-index: 0;
+    background-color: #C5A059;
 }
 
 .card:hover {
-  box-shadow: 0.063rem 0.063rem 1.25rem 0.375rem rgb(0 0 0 / 53%);
+    box-shadow: 0.063rem 0.063rem 1.25rem 0.375rem rgb(0 0 0 / 53%);
 }
 
 /* Cada card tem um clip-path diferente no pseudo-elemento */
 .card:nth-child(1)::before {
-  bottom: 0;
-  right: 0;
-  clip-path: circle(calc(6.25rem + 7.5vw) at 100% 100%);
+    bottom: 0;
+    right: 0;
+    clip-path: circle(calc(6.25rem + 7.5vw) at 100% 100%);
 }
 
 .card:nth-child(2)::before {
-  bottom: 0;
-  left: 0;
-  clip-path: circle(calc(6.25rem + 7.5vw) at 0% 100%);
+    bottom: 0;
+    left: 0;
+    clip-path: circle(calc(6.25rem + 7.5vw) at 0% 100%);
 }
 
 .card:nth-child(3)::before {
-  top: 0;
-  right: 0;
-  clip-path: circle(calc(6.25rem + 7.5vw) at 100% 0%);
+    top: 0;
+    right: 0;
+    clip-path: circle(calc(6.25rem + 7.5vw) at 100% 0%);
 }
 
 .card:nth-child(4)::before {
-  top: 0;
-  left: 0;
-  clip-path: circle(calc(6.25rem + 7.5vw) at 0% 0%);
+    top: 0;
+    left: 0;
+    clip-path: circle(calc(6.25rem + 7.5vw) at 0% 0%);
 }
 
 .card p {
-  transition: 0.8s;
+    transition: 0.8s;
 }
 
 .card:hover::before {
-  clip-path: circle(110vw at 100% 100%);
+    clip-path: circle(110vw at 100% 100%);
 }
 
 .card:hover p {
-  color: #fff;
+    color: #fff;
 }
 
 /* Elemento .circle (usado para as imagens) */
 .circle {
-  /* Estilos base (podem ser vazios) */
+    /* Estilos base (podem ser vazios) */
 }
 
 /* Media query para posicionamento absoluto do .circle */
 @media screen and (min-width: 62.5rem) {
-  .circle {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-  }
+    .circle {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
 }
 
 /* Imagens de fundo para cada card */
 .card:nth-child(1) .circle {
-  background: url("https://images.unsplash.com/photo-1587440871875-191322ee64b0?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat 50% 50% / cover;
-  bottom: 0;
-  right: 0;
-  clip-path: circle(calc(6.25rem + 7.5vw) at 100% 100%);
+    background: image();
+    bottom: 0;
+    right: 0;
+    clip-path: circle(calc(6.25rem + 7.5vw) at 100% 100%);
 }
 
 .card:nth-child(2) .circle {
-  background: url("https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat 50% 50% / cover;
-  bottom: 0;
-  left: 0;
-  clip-path: circle(calc(6.25rem + 7.5vw) at 0% 100%);
+    background: image();
+    bottom: 0;
+    left: 0;
+    clip-path: circle(calc(6.25rem + 7.5vw) at 0% 100%);
 }
 
 .card:nth-child(3) .circle {
-  background: url("https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat 50% 50% / cover;
-  top: 0;
-  right: 0;
-  clip-path: circle(calc(6.25rem + 7.5vw) at 100% 0%);
+    background: image();
+    top: 0;
+    right: 0;
+    clip-path: circle(calc(6.25rem + 7.5vw) at 100% 0%);
 }
 
 .card:nth-child(4) .circle {
-  background: url("https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat 50% 50% / cover;
-  top: 0;
-  left: 0;
-  clip-path: circle(calc(6.25rem + 7.5vw) at 0% 0%);
+    background: image();
+    top: 0;
+    left: 0;
+    clip-path: circle(calc(6.25rem + 7.5vw) at 0% 0%);
 }
