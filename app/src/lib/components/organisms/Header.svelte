@@ -30,8 +30,8 @@
 </script>
 
 <BlackStrip contatos={contatos}/>
-<header id="main-header" class="sticky top-0 z-50 bg-white transition-all duration-300 border-b border-gray-100">
-    <div class="container mx-auto px-4 h-20 flex justify-between items-center">
+<header id="main-header" class="sticky top-0 z-50 bg-aero-50 p-3 border-2 border-aero-100">
+    <div class="container mx-auto px-8 flex justify-between items-center">
 
         <Logo src={logoImg} />
 
@@ -78,7 +78,7 @@
     <!-- Menu Mobile Dropdown -->
     {#if isMenuOpen}
         <div
-            class="md:hidden absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-2xl py-4 px-4 flex flex-col gap-2 z-50"
+            class="md:hidden absolute top-full left-0 w-full bg-aero-50 border border-gray-100 shadow-2xl py-4 px-4 flex flex-col gap-2 z-50"
             transition:slide={{ duration: 300 }}
             style="max-height: calc(100vh - 80px); overflow-y: auto;"
         >

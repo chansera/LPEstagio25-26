@@ -10,5 +10,5 @@ import Cta from '$lib/components/molecules/Cta.svelte';
     <meta name="robots" content="index, follow" />
 </svelte:head>
 <Hero />
-<Cta />
 <Features />
+<Cta />

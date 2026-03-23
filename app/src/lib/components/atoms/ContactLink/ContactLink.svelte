@@ -11,7 +11,7 @@
   target="_blank"
   rel="noopener noreferrer"
   aria-label="Link de contato"
-  class="flex items-center gap-2 hover:text-brand transition-colors"
+  class="flex items-center gap-2 hover:text-gold-light transition-colors"
 >
   <PhoneSvg />
   {contactName}: {numero}
