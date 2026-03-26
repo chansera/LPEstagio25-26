@@ -8,7 +8,7 @@
      outline: "btn-outline"
  };
 
- const baseClass ="flex gap-2 font-semibold py-2 px-6 sm:py-3 sm:px-8 rounded-xl text-base sm:text-lg  items-center justify-center";
+ const baseClass ="flex gap-2 w-full  h-16 font-semibold py-2 px-6 sm:py-3 sm:px-8 rounded-xl text-base sm:text-lg  items-center justify-center";
  const finalClass = $derived(`${baseClass} ${variants[variant]} ${className}`.trim());
 </script>
 

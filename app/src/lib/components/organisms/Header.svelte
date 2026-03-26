@@ -27,10 +27,32 @@
      if (href !== '/' && currentPath.startsWith(href)) return true;
      return false;
  }
+
+
+ let baseClass = "sticky top-0 z-50  p-3 border-1 border-aero-50";
+ let glass = "bg-aero-50/10 backdrop-blur-sm border-aero-50/20 shadow-lg";
+ // 1. Estado reativo para controlar a classe de estilo
+  let scrolled = $state(false);
+
+  // 2. Efeito colateral para gerenciar o event listener
+  $effect(() => {
+    const onScroll = () => {
+      scrolled = window.scrollY > 20;
+    };
+
+    // Adiciona o listener com opção de performance
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    // Função de limpeza (cleanup) executada automaticamente
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+    };
+  });
+
 </script>
 
 <BlackStrip contatos={contatos}/>
-<header id="main-header" class="sticky top-0 z-50 bg-aero-50 p-3 border-2 border-aero-100">
+<header id="main-header" class={`${baseClass} ${scrolled? glass : 'bg-aero-50'}`}>
     <div class="container mx-auto px-8 flex justify-between items-center">
 
         <Logo src={logoImg} />

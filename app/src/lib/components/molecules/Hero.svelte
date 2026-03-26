@@ -5,6 +5,7 @@
     import { formatWhatsAppLink } from "$lib/utils/whatsapp";
     import SetaSvg from "../atoms/SetaSvg.svelte";
     let whatsRegina = formatWhatsAppLink(CONTATOS.comercial.numero);
+
 </script>
 
 <section>
@@ -27,7 +28,7 @@
                     </div>
 
                     <h1
-                        class="text-2xl font-extrabold text-aero-800 tracking-tight md:text-4xl"
+                        class="text-2xl font-extrabold text-aero-800 tracking-tight md:text-2xl"
                     >
                         Manutenção de Componentes Aeronáuticos.
                     </h1>
@@ -62,7 +63,7 @@
                         className="group justify-center bg-gold-gradient  hover:scale-[1.02] transition-all duration-300 shadow-lg shadow-gold-base/20 hover:shadow-xl hover:shadow-gold-base/30"
                     >
                         <span class="flex items-center">
-                            Falar com Especialista
+                            Entre em contato
                             <SetaSvg />
                         </span>
                     </Button>
