@@ -1,10 +1,10 @@
 <script lang="ts">
-    import Button from "$lib/components/atoms/Button/Button.svelte";
-    import painelImg from "$lib/assets/painel.webp";
-    import { CONTATOS } from "$lib/constants";
-    import { formatWhatsAppLink } from "$lib/utils/whatsapp";
-    import SetaSvg from "../atoms/SetaSvg.svelte";
-    let whatsRegina = formatWhatsAppLink(CONTATOS.comercial.numero);
+ import Button from "$lib/components/atoms/Button/Button.svelte";
+ import painelImg from "$lib/assets/painel.webp";
+ import { CONTATOS } from "$lib/constants";
+ import { formatWhatsAppLink } from "$lib/utils/whatsapp";
+ import PhoneSvg from "../atoms/PhoneSvg.svelte";
+ let whatsRegina = formatWhatsAppLink(CONTATOS.comercial.numero);
 
 </script>
 
@@ -19,12 +19,12 @@
                 <div class="space-y-2">
                     <div class="inline-flex items-center gap-2 mb-4">
                         <span class="text-sm font-medium text-gold-rich"
-                            >Oficina Aprovada ANAC</span
-                        >
+                        >Oficina Aprovada ANAC</span
+                                              >
                         <span class="text-gray-300">•</span>
                         <span class="text-sm text-aero-700"
-                            >Atuando desde 1997</span
-                        >
+                        >Atuando desde 1997</span
+                                           >
                     </div>
 
                     <h1
@@ -54,17 +54,17 @@
 
                 <div class="mt-10 flex flex-col sm:flex-row items-start gap-4">
                     <Button variant="primary" href="/servicos"
-                        >Nossos Serviços</Button
-                    >
+                    >Nossos Serviços</Button
+                                    >
                     <Button
                         variant="secondary"
                         href={whatsRegina}
                         target="_blank"
                         className="group justify-center bg-gold-gradient  hover:scale-[1.02] transition-all duration-300 shadow-lg shadow-gold-base/20 hover:shadow-xl hover:shadow-gold-base/30"
                     >
-                        <span class="flex items-center">
+                        <span class="flex gap-2 items-center">
+                            <PhoneSvg/>
                             Entre em contato
-                            <SetaSvg />
                         </span>
                     </Button>
                 </div>
