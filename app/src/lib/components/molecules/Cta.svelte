@@ -1,13 +1,15 @@
 <script lang="ts">
     import Button from "$lib/components/atoms/Button/Button.svelte";
-    import { SITE_INFO } from "$lib/constants";
+    import { CONTATOS } from "$lib/constants";
+    import { formatWhatsAppLink } from "$lib/utils/whatsapp";
     import SetaSvg from "../atoms/SetaSvg.svelte";
+    let whatsRegina = formatWhatsAppLink(CONTATOS.comercial.numero);
 </script>
 
 <section
     class="bg-gradient-to-br from-aero-950 to-aero-900 py-20 lg:py-28 relative overflow-hidden"
 >
-    <!-- Decoração de fundo -->
+
     <div
         class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-gold-base/5 via-transparent to-transparent"
     ></div>
@@ -32,14 +34,13 @@
                             >Sua frota não pode</span
                         >
                         <span class="text-gold-metal block">esperar.</span>
-                        <span class="text-aero-50">Nem nós.</span>
                     </h2>
 
                     <p
                         class="text-xl text-aero-300 mb-10 max-w-lg leading-relaxed"
                     >
-                        Orçamento urgente ou suporte especializado? Nossa equipe
-                        de engenharia está pronta para receber seu componente <span
+                        Precisando de atendimento imediato? <br />
+                        Nossa equipe está pronta para receber seu componente <span
                             class="text-gold-base font-semibold"
                             >imediatamente</span
                         >.
@@ -49,14 +50,14 @@
                 <!-- Botões -->
                 <div class="flex flex-col sm:flex-row gap-5">
                     <Button
-                        href="https://wa.me/{SITE_INFO.regina}"
+                        href={whatsRegina}
                         target="_blank"
                         variant="secondary"
                         className="group bg-gold-gradient  hover:scale-[1.02] transition-all duration-300 shadow-lg shadow-gold-base/20 hover:shadow-xl hover:shadow-gold-base/30"
                     >
                         <span class="flex items-center gap-3">
                             Falar com Especialista
-                            <SetaSvg tamanho={2} />
+                            <SetaSvg/>
                         </span>
                     </Button>
                 </div>

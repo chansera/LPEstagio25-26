@@ -30,7 +30,7 @@
 
 
  let baseClass = "sticky top-0 z-50  p-3 border-1 border-aero-50";
- let glass = "bg-aero-50/10 backdrop-blur-sm border-aero-50/20 shadow-lg";
+ let glass = "bg-white/30 backdrop-blur-sm border-aero-50/20 shadow-lg";
  // 1. Estado reativo para controlar a classe de estilo
   let scrolled = $state(false);
 
@@ -84,7 +84,7 @@
 
         <!-- Botão Mobile -->
         <button
-            class="md:hidden text-gray-700 hover:text-brand focus:outline-none p-2"
+            class="md:hidden text-aero-700 hover:text-brand focus:outline-none p-2"
             onclick={toggleMenu}
             aria-expanded={isMenuOpen}
             aria-label="Menu"
@@ -100,7 +100,7 @@
     <!-- Menu Mobile Dropdown -->
     {#if isMenuOpen}
         <div
-            class="md:hidden absolute top-full left-0 w-full bg-aero-50 border border-gray-100 shadow-2xl py-4 px-4 flex flex-col gap-2 z-50"
+        class="md:hidden absolute top-full left-0 bg-aero-900/80 backdrop-blur-lg w-full py-4 px-4 flex flex-col gap-2 z-50"
             transition:slide={{ duration: 300 }}
             style="max-height: calc(100vh - 80px); overflow-y: auto;"
         >
@@ -124,7 +124,7 @@
             </nav>
 
             <div class="border-t border-gray-100 w-full pt-6 mt-auto">
-            <Button href={formatWhatsAppLink(CONTATOS.financeiro.numero)} variant="primary">
+            <Button href={formatWhatsAppLink(CONTATOS.financeiro.numero)} variant="secondary">
                 <PhoneSvg/>
                 <span>Solicitar Orçamento</span>
             </Button>
