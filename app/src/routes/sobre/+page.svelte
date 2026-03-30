@@ -1,4 +1,5 @@
 <script lang="ts">
+ import Pilares from '$lib/components/molecules/Pilares.svelte';
  import TimeLine from '$lib/components/organisms/TimeLine.svelte';
 </script>
 
@@ -8,4 +9,6 @@
     <meta name="keywords" content="manutenção aeronáutica, componente aeronáutico, ANAC, FAA, EASA, oficina homologada, manutenção de aeronaves" />
     <meta name="robots" content="index, follow" />
 </svelte:head>
-<TimeLine />
+
+    <Pilares />
+    <TimeLine />

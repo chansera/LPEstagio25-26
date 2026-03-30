@@ -1,7 +1,6 @@
 <script lang="ts">
 import Hero from '$lib/components/molecules/Hero.svelte';
 import Cta from '$lib/components/molecules/Cta.svelte';
- import Features from '$lib/components/molecules/Features.svelte';
 </script>
 <svelte:head>
     <title>DAA Aviação - Manutenção de Componentes Aeronáuticos Homologada ANAC, FAA, EASA</title>
@@ -11,4 +10,3 @@ import Cta from '$lib/components/molecules/Cta.svelte';
 </svelte:head>
 <Hero />
 <Cta />
-<Features />
