@@ -100,7 +100,7 @@
     <!-- Menu Mobile Dropdown -->
     {#if isMenuOpen}
         <div
-        class="md:hidden absolute top-full left-0 bg-aero-900/80 backdrop-blur-lg w-full py-4 px-4 flex flex-col gap-2 z-50"
+        class="md:hidden absolute  left-0 bg-aero-50/95 backdrop-blur-lg w-full py-4 px-4 flex flex-col gap-2 z-50"
             transition:slide={{ duration: 300 }}
             style="max-height: calc(100vh - 80px); overflow-y: auto;"
         >
