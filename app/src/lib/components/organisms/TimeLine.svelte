@@ -6,7 +6,7 @@
 <section class="bg-gray-50 py-20">
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center max-w-3xl mx-auto mb-16">
-      <h1 class="text-2xl md:text-4xl font-extrabold text-gold-dark tracking-tight">
+      <h1 class="text-2xl md:text-4xl text-gold-dark tracking-tight">
   Nossa Trajetória
       </h1>
       <p class=" text-sm mt-4 text-gray-600 md:text-lg">

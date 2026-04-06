@@ -22,13 +22,13 @@
                         >Oficina Aprovada ANAC</span
                                               >
                         <span class="text-gray-300">•</span>
-                        <span class="text-sm text-aero-700"
+                        <span class="text-sm text-old-rich"
                         >Atuando desde 1997</span
                                            >
                     </div>
 
                     <h1
-                        class="text-2xl font-extrabold text-aero-800 tracking-tight md:text-2xl"
+                        class="text-2xl font-extrabold text-gold-rich tracking-tight md:text-2xl"
                     >
                         Manutenção de Componentes Aeronáuticos.
                     </h1>

@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-    <title>DAA Aviação - Manutenção de Componentes Aeronáuticos Homologada ANAC, FAA, EASA</title>
+    <title>D.A Aviação - Manutenção de Componentes Aeronáuticos Homologada ANAC, FAA, EASA</title>
     <meta name="description" content="Serviços oferecidos" />
     <meta name="keywords" content="manutenção aeronáutica, componente aeronáutico, ANAC, FAA, EASA, oficina homologada, manutenção de aeronaves" />
     <meta name="robots" content="index, follow" />
