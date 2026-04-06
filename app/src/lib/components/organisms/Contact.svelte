@@ -10,7 +10,7 @@ let contatos = getContatosArray();
 
 
     <div class="text-center mb-16">
-      <h1 class="text-3xl md:text-5xl font-extrabold text-gold-dark">
+      <h1 class="text-3xl md:text-5xl text-gold-dark">
         Entre em Contato
       </h1>
       <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
