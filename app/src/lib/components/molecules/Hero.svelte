@@ -21,14 +21,14 @@
                         <span class="text-sm font-medium text-gold-rich"
                         >Oficina Aprovada ANAC</span
                                               >
-                        <span class="text-gray-300">•</span>
-                        <span class="text-sm text-old-rich"
+                        <span class="text-aero-300">•</span>
+                        <span class="text-sm text-aero-600"
                         >Atuando desde 1997</span
                                            >
                     </div>
 
                     <h1
-                        class="text-2xl font-extrabold text-gold-rich tracking-tight md:text-2xl"
+                        class="text-2xl font-bold text-aero-600 tracking-tight md:text-2xl"
                     >
                         Manutenção de Componentes Aeronáuticos.
                     </h1>
@@ -37,7 +37,7 @@
                     </p>
                 </div>
 
-                <p class="mt-2 max-w-xl text-base md:text-lg text-aero-950">
+                <p class="mt-2 max-w-xl text-base md:text-lg text-aero-600">
                     Elevamos a segurança e a performance da sua frota com
                     serviços homologados pelos mais altos padrões da aviação
                     global.
